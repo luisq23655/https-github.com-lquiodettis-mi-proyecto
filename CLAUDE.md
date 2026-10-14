@@ -31,6 +31,7 @@ Construir un negocio de productos digitales **rentable** (margen > 70 %) y
 | `cerebro/03-marketing-y-ventas.md` | Embudos, tráfico, copywriting, email |
 | `cerebro/04-metricas.md` | KPIs, fórmulas y umbrales de alerta |
 | `cerebro/05-mcps.md` | MCPs que usamos para autogestionar el negocio y cómo conectarlos |
+| `cerebro/06-estructura-legal.md` | ¿Persona física o LLC? Fases, costos y obligaciones fiscales |
 | `cerebro/bitacora.md` | Registro de decisiones y aprendizajes |
 | `cerebro/ideas/` | Una ficha por idea de producto evaluada |
 | `cerebro/plantillas/` | Scorecard, página de ventas, checklist de lanzamiento |
