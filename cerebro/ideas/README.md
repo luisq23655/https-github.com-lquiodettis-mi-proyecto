@@ -5,4 +5,4 @@ Estado posible: 💡 nueva · 🧪 validando · 🚀 lanzada · 🗑️ descarta
 
 | Idea | Puntuación | Estado |
 |---|---|---|
-| — | — | — |
+| [Servicios de implementación de IA — Panamá](panama-servicios-ia.md) | 37/50 | 🧪 validando |
