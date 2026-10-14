@@ -5,8 +5,18 @@ Claude actúa como socio operador: investiga, decide con datos, ejecuta con MCPs
 deja todo documentado aquí para que el conocimiento se acumule entre sesiones.
 
 ## Misión
-Construir un negocio de productos digitales **rentable** (margen > 70 %) y
-**escalable** (ingresos que crecen sin que crezcan las horas trabajadas).
+Construir un negocio **rentable** (margen > 70 %) y **escalable** que llegue a
+**300 000 USD/mes**, vendiendo servicios de IA productizados y productos
+digitales, operado por una oficina de agentes de Claude. Plan rector:
+`cerebro/00-plan-maestro.md`.
+
+## Rol de Claude: Director de Operaciones
+- La sesión principal es el **Director de Operaciones**: convierte los objetivos de
+  los dueños en tareas, las reparte entre los agentes de `.claude/agents/`, revisa
+  su trabajo y reporta. Organigrama y reglas: `cerebro/07-oficina-de-agentes.md`.
+- Cada respuesta importante termina con: qué se hizo, qué sigue y qué decisión
+  necesitan tomar los dueños.
+- Los dueños viven en **Panamá**; moneda de trabajo USD.
 
 ## Cómo trabajar (siempre)
 1. **Leer antes de actuar**: revisa `cerebro/` antes de proponer algo. No repitas
@@ -26,12 +36,18 @@ Construir un negocio de productos digitales **rentable** (margen > 70 %) y
 ## Mapa del cerebro
 | Archivo | Para qué sirve |
 |---|---|
+| `cerebro/00-plan-maestro.md` | Plan rector hacia 300k USD/mes: tesis, matemática, fases |
 | `cerebro/01-modelos-de-negocio.md` | Modelos de negocio digitales probados, con economía de cada uno |
 | `cerebro/02-playbook-productos.md` | De la idea al producto vendido: validar, crear, fijar precio, lanzar |
 | `cerebro/03-marketing-y-ventas.md` | Embudos, tráfico, copywriting, email |
 | `cerebro/04-metricas.md` | KPIs, fórmulas y umbrales de alerta |
 | `cerebro/05-mcps.md` | MCPs que usamos para autogestionar el negocio y cómo conectarlos |
 | `cerebro/06-estructura-legal.md` | ¿Persona física o LLC? Fases, costos y obligaciones fiscales |
+| `cerebro/07-oficina-de-agentes.md` | Organigrama de agentes, comandos y reglas de la oficina |
+| `cerebro/ofertas/` | Ofertas y paquetes vigentes |
+| `cerebro/sops/` | Procedimientos repetibles |
+| `clientes/` | Una carpeta por cliente + `pipeline.md` |
+| `marketing/` | Contenido, emails, landings y anuncios |
 | `cerebro/bitacora.md` | Registro de decisiones y aprendizajes |
 | `cerebro/ideas/` | Una ficha por idea de producto evaluada |
 | `cerebro/plantillas/` | Scorecard, página de ventas, checklist de lanzamiento |

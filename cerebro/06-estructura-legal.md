@@ -69,3 +69,26 @@ Comprador paga con tarjeta/PayPal/método local
   suele costar 3–5 % en tipo de cambio. Alternativas para recibir USD con menos
   pérdida: Wise o Payoneer (verificar qué plataformas pagan a cada una).
 - Verificar en cada plataforma qué métodos de payout existen para el país de residencia.
+
+## Panamá (país de residencia de los dueños)
+> Puntos a confirmar con un contador/abogado panameño antes de facturar.
+
+- **Moneda**: el dólar circula legalmente → no hay pérdida por tipo de cambio al
+  recibir USD (solo comisiones de retiro).
+- **Impuesto territorial**: Panamá grava solo la renta de **fuente panameña**. La
+  renta de fuente extranjera no paga ISR en Panamá. Hay un matiz importante: los
+  servicios prestados *desde* Panamá pueden considerarse de fuente panameña, salvo
+  las excepciones del Código Fiscal (art. 694) para operaciones que se perfeccionan
+  o surten efectos en el exterior. **Confirmar cómo se clasifican nuestros ingresos**
+  (clientes panameños = fuente panameña con seguridad).
+- **ITBMS (7 %)**: aplica a servicios prestados en Panamá a clientes panameños.
+- **Para empezar**: aviso de operación como persona natural (Panamá Emprende) + RUC
+  en la DGI. Después: Sociedad Anónima panameña o SRL, o LLC de EE. UU. si se
+  necesita Stripe.
+- **Cobros**: Stripe **no** acepta cuentas de Panamá → opciones: PayPal, Gumroad /
+  Lemon Squeezy (payout a PayPal o banco), Hotmart, transferencias ACH/Yappy para
+  clientes locales, o LLC de EE. UU. (Stripe Atlas) con banco Mercury/Relay para
+  cobrar retainers con tarjeta y suscripciones.
+- **Recomendación para retainers de servicio**: cuando haya 3+ clientes recurrentes,
+  evaluar LLC de EE. UU. + Stripe (cobro automático mensual) vs. sociedad panameña
+  + PayPal/ACH. Decidir con el contador según la clasificación de la renta.
