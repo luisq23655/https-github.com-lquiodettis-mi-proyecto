@@ -54,3 +54,18 @@ elimina impuestos; ordena la operación.
 ## Decisión por defecto del cerebro
 Empezar como **persona física + Gumroad/Lemon Squeezy (global) + Hotmart (LatAm)**.
 Revisar la LLC cuando se cumplan los criterios de la fase 2.
+
+## Cómo llega el dinero (fase 1)
+```
+Comprador paga con tarjeta/PayPal/método local
+   → Plataforma (Gumroad / Lemon Squeezy / Hotmart) cobra y retiene impuestos
+   → Pago periódico (payout) → PayPal o cuenta bancaria propia
+```
+- No hace falta tener pasarela propia: la plataforma procesa el pago.
+- **Gumroad**: payouts semanales a banco (países soportados) o PayPal.
+- **Lemon Squeezy**: payouts a banco o PayPal.
+- **Hotmart**: retiro a cuenta bancaria local en LatAm (comisión de retiro aprox. 1 USD).
+- **PayPal** sirve como destino universal, pero convertir y retirar a banco local
+  suele costar 3–5 % en tipo de cambio. Alternativas para recibir USD con menos
+  pérdida: Wise o Payoneer (verificar qué plataformas pagan a cada una).
+- Verificar en cada plataforma qué métodos de payout existen para el país de residencia.
