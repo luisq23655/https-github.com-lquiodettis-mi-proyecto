@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[MARCA] · Agente de IA para tu negocio en 14 días</title>
+<meta name="description" content="Implementamos un agente de IA que responde, califica y agenda a tus clientes por WhatsApp y web. Funcionando en 14 días. Clínicas, inmobiliarias, academias y firmas legales en Panamá y LatAm.">
+<meta name="theme-color" content="#0f766e">
+<meta property="og:title" content="Agente de IA para tu negocio, funcionando en 14 días">
+<meta property="og:description" content="Responde en segundos, 24/7, por WhatsApp y web. Sin perder un solo lead.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!--
+  NOTAS PARA LOS DUEÑOS (borrar antes de publicar):
+  - Reemplazar [MARCA] por el nombre comercial.
+  - Reemplazar https://wa.me/507XXXXXXXX por el número real (formato 507 + 8 dígitos, sin "+").
+  - Reemplazar https://calendar.app.google/XXXXXXXX por el link de "Agenda de citas" de Google Calendar (gratis).
+  - Reemplazar hola@[MARCA].com por el email real.
+  - La sección "Prueba" tiene PLACEHOLDERS: solo se llena con casos reales y autorizados por el cliente.
+  - Garantía tomada de cerebro/00-plan-maestro.md: confirmar antes de publicar.
+  - Hosting: GitHub Pages → Settings > Pages > carpeta /marketing/landing (o copiar este archivo a /docs).
+-->
+<style>
+:root{
+  --bg:#ffffff; --bg-alt:#f4f7f6; --card:#ffffff; --text:#0f172a; --muted:#475569;
+  --border:#e2e8f0; --brand:#0f766e; --brand-strong:#115e59; --brand-soft:#ccfbf1;
+  --accent:#f59e0b; --wa:#1fa855; --wa-strong:#178a45; --shadow:0 1px 2px rgba(15,23,42,.06),0 8px 24px rgba(15,23,42,.06);
+  --radius:16px; --max:1080px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0b1220; --bg-alt:#0f1a2b; --card:#111c2e; --text:#e6edf6; --muted:#9fb0c6;
+    --border:#1f2d44; --brand:#2dd4bf; --brand-strong:#5eead4; --brand-soft:#123a3a;
+    --accent:#fbbf24; --wa:#25d366; --wa-strong:#1fb758; --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0b1220; --bg-alt:#0f1a2b; --card:#111c2e; --text:#e6edf6; --muted:#9fb0c6;
+  --border:#1f2d44; --brand:#2dd4bf; --brand-strong:#5eead4; --brand-soft:#123a3a;
+  --accent:#fbbf24; --wa:#25d366; --wa-strong:#1fb758; --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+a{color:var(--brand)}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 16px}
+section{padding:56px 0}
+.alt{background:var(--bg-alt)}
+h1,h2,h3{line-height:1.2;margin:0 0 12px;letter-spacing:-.01em}
+h1{font-size:clamp(1.9rem,6vw,3.2rem);font-weight:800}
+h2{font-size:clamp(1.5rem,4.5vw,2.2rem);font-weight:800}
+h3{font-size:1.1rem;font-weight:700}
+p{margin:0 0 12px}
+.muted{color:var(--muted)}
+.eyebrow{display:inline-block;font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--brand);margin-bottom:10px}
+.lead{font-size:1.1rem;color:var(--muted);max-width:640px}
+.center{text-align:center}.center .lead{margin-left:auto;margin-right:auto}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.logo{font-weight:800;font-size:1.1rem;color:var(--text);text-decoration:none}
+.logo span{color:var(--brand)}
+.nav-right{display:flex;align-items:center;gap:8px}
+.theme-btn{width:40px;height:40px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text);cursor:pointer;display:grid;place-items:center}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 20px;border-radius:12px;font-weight:700;text-decoration:none;border:2px solid transparent;transition:transform .15s,background .15s;font-size:1rem;text-align:center}
+.btn:active{transform:scale(.98)}
+.btn-wa{background:var(--wa);color:#fff}.btn-wa:hover{background:var(--wa-strong)}
+.btn-primary{background:var(--brand);color:#fff}.btn-primary:hover{background:var(--brand-strong)}
+:root[data-theme="dark"] .btn-primary{color:#04201d}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn-primary{color:#04201d}}
+.btn-ghost{border-color:var(--border);color:var(--text);background:var(--card)}
+.btn-sm{min-height:40px;padding:8px 14px;font-size:.9rem}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.ctas .btn{flex:1 1 220px}
+@media (min-width:720px){.ctas .btn{flex:0 0 auto}}
+
+/* hero */
+.hero{padding:48px 0 56px}
+.hero-grid{display:grid;gap:32px;align-items:center}
+@media (min-width:900px){.hero-grid{grid-template-columns:1.15fr .85fr}}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;padding:0;list-style:none}
+.badges li{font-size:.85rem;padding:6px 10px;border-radius:999px;background:var(--brand-soft);color:var(--text);font-weight:600}
+
+/* chat mockup */
+.phone{background:var(--card);border:1px solid var(--border);border-radius:24px;box-shadow:var(--shadow);padding:16px;max-width:380px;margin:0 auto;width:100%}
+.phone-top{display:flex;align-items:center;gap:10px;padding-bottom:12px;border-bottom:1px solid var(--border);margin-bottom:12px}
+.avatar{width:36px;height:36px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-weight:800;font-size:.85rem}
+.phone-top small{display:block;color:var(--muted);font-size:.75rem}
+.msg{max-width:85%;padding:9px 12px;border-radius:14px;margin:6px 0;font-size:.92rem;line-height:1.45}
+.in{background:var(--bg-alt);border-bottom-left-radius:4px}
+.out{background:var(--brand-soft);margin-left:auto;border-bottom-right-radius:4px}
+.time{display:block;font-size:.68rem;color:var(--muted);margin-top:2px;text-align:right}
+.mock-note{font-size:.75rem;color:var(--muted);text-align:center;margin-top:10px}
+
+/* cards */
+.grid{display:grid;gap:16px}
+@media (min-width:640px){.g2{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:900px){.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.card p:last-child{margin-bottom:0}
+.icon{width:44px;height:44px;border-radius:12px;background:var(--brand-soft);color:var(--brand);display:grid;place-items:center;margin-bottom:12px}
+.icon svg{width:22px;height:22px}
+.pain{border-left:4px solid var(--accent)}
+
+/* steps */
+.steps{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:16px}
+@media (min-width:900px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{position:relative}
+.step .day{display:inline-block;font-size:.78rem;font-weight:800;color:var(--brand);background:var(--brand-soft);padding:4px 10px;border-radius:999px;margin-bottom:10px}
+
+/* verticals tabs */
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin:20px 0 16px;scrollbar-width:thin}
+.tab{flex:0 0 auto;min-height:44px;padding:8px 16px;border-radius:999px;border:1px solid var(--border);background:var(--card);color:var(--text);font-weight:600;cursor:pointer;font-size:.95rem}
+.tab[aria-selected="true"]{background:var(--brand);border-color:var(--brand);color:#fff}
+:root[data-theme="dark"] .tab[aria-selected="true"]{color:#04201d}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tab[aria-selected="true"]{color:#04201d}}
+.panel[hidden]{display:none}
+.checks{list-style:none;padding:0;margin:0}
+.checks li{position:relative;padding-left:28px;margin:8px 0}
+.checks li::before{content:"";position:absolute;left:0;top:6px;width:16px;height:16px;border-radius:50%;background:var(--brand-soft);box-shadow:inset 0 0 0 5px var(--brand)}
+
+/* pricing */
+.price-card{display:flex;flex-direction:column}
+.price-card.featured{border:2px solid var(--brand);position:relative}
+.tag{position:absolute;top:-12px;left:22px;background:var(--brand);color:#fff;font-size:.75rem;font-weight:800;padding:4px 10px;border-radius:999px}
+:root[data-theme="dark"] .tag{color:#04201d}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tag{color:#04201d}}
+.price{font-size:2rem;font-weight:800;margin:6px 0 0}
+.price small{font-size:.9rem;font-weight:600;color:var(--muted)}
+.monthly{color:var(--muted);font-weight:600;margin-bottom:14px}
+.price-card .checks{flex:1;margin-bottom:18px}
+.entry{margin-top:20px;display:grid;gap:16px;align-items:center}
+@media (min-width:800px){.entry{grid-template-columns:1fr auto}}
+.fine{font-size:.85rem;color:var(--muted);margin-top:14px}
+
+/* proof placeholders */
+.placeholder{border:2px dashed var(--border);border-radius:var(--radius);padding:22px;color:var(--muted);text-align:center}
+
+/* faq */
+details{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:0 18px;margin:10px 0}
+summary{cursor:pointer;font-weight:700;padding:16px 28px 16px 0;list-style:none;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:0;top:12px;font-size:1.4rem;color:var(--brand);font-weight:400}
+details[open] summary::after{content:"–"}
+details p{padding-bottom:16px;margin:0;color:var(--muted)}
+
+/* final cta */
+.final{background:linear-gradient(135deg,var(--brand),var(--brand-strong));color:#fff;border-radius:24px;padding:40px 22px;text-align:center}
+.final h2{color:#fff}.final p{color:rgba(255,255,255,.9)}
+.final .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+:root[data-theme="dark"] .final{color:#04201d}
+:root[data-theme="dark"] .final h2,:root[data-theme="dark"] .final p{color:#04201d}
+:root[data-theme="dark"] .final .btn-ghost{color:#04201d;border-color:rgba(4,32,29,.5)}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .final,:root:not([data-theme="light"]) .final h2,:root:not([data-theme="light"]) .final p{color:#04201d}
+  :root:not([data-theme="light"]) .final .btn-ghost{color:#04201d;border-color:rgba(4,32,29,.5)}
+}
+.final .ctas{justify-content:center}
+
+footer{padding:32px 0 96px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--border)}
+@media (min-width:720px){footer{padding-bottom:32px}}
+
+/* floating WA (mobile) */
+.fab{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 8px 24px rgba(0,0,0,.25);border-radius:999px}
+.fab .btn{border-radius:999px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.btn{transition:none}}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#">[MARCA]<span>.</span></a>
+    <div class="nav-right">
+      <a class="btn btn-wa btn-sm" href="https://wa.me/507XXXXXXXX?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20saber%20m%C3%A1s%20del%20agente%20de%20IA" target="_blank" rel="noopener">WhatsApp</a>
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="Cambiar entre modo claro y oscuro">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Para clínicas, inmobiliarias, academias y firmas legales</span>
+      <h1>Tu agente de IA respondiendo, calificando y agendando clientes en 14 días</h1>
+      <p class="lead">Contesta por WhatsApp y tu web en segundos, a cualquier hora, con la información de tu negocio. Tú solo atiendes a los clientes que ya están listos para comprar.</p>
+      <div class="ctas">
+        <a class="btn btn-wa" href="https://wa.me/507XXXXXXXX?text=Hola%2C%20quiero%20un%20diagn%C3%B3stico%20para%20mi%20negocio" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg>
+          Escríbenos por WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="https://calendar.app.google/XXXXXXXX" target="_blank" rel="noopener">Agendar diagnóstico de 20 min</a>
+      </div>
+      <ul class="badges" aria-label="Lo que incluye">
+        <li>WhatsApp + web</li><li>24/7</li><li>En español</li><li>Listo en 14 días</li>
+      </ul>
+    </div>
+
+    <div class="phone" aria-label="Ejemplo ilustrativo de conversación con el agente">
+      <div class="phone-top">
+        <div class="avatar" aria-hidden="true">IA</div>
+        <div><strong>Clínica de ejemplo</strong><small>Asistente virtual · en línea</small></div>
+      </div>
+      <div class="msg in">Hola, ¿cuánto cuesta una limpieza dental? ¿Tienen cita esta semana?<span class="time">11:42 p. m.</span></div>
+      <div class="msg out">¡Hola! La limpieza cuesta desde B/. [PRECIO] e incluye revisión. Tengo espacio el jueves a las 9:00 a. m. o el viernes a las 3:00 p. m. ¿Cuál te queda mejor?<span class="time">11:42 p. m.</span></div>
+      <div class="msg in">El jueves 9 am</div>
+      <div class="msg out">Listo ✅ Te reservé el jueves 9:00 a. m. ¿Me confirmas tu nombre completo? Te enviaré un recordatorio un día antes.<span class="time">11:43 p. m.</span></div>
+      <p class="mock-note">Conversación ilustrativa. Tu agente usa tus precios, horarios y tono.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMA -->
+<section class="alt" id="problema">
+  <div class="wrap">
+    <span class="eyebrow">El problema</span>
+    <h2>Estás pagando por atraer clientes… y se te van por no contestar a tiempo</h2>
+    <p class="lead">Inviertes en anuncios, redes y referidos. Llegan los mensajes. Pero el equipo está ocupado, es de noche o es domingo, y el cliente le escribe al siguiente de la lista.</p>
+    <div class="grid g3" style="margin-top:24px">
+      <div class="card pain"><h3>Mensajes sin respuesta</h3><p class="muted">WhatsApp lleno de "¿precio?", "¿tienen cita?", "¿dónde quedan?" que nadie alcanza a contestar rápido.</p></div>
+      <div class="card pain"><h3>Leads que se enfrían</h3><p class="muted">Quien pregunta y no recibe respuesta en minutos casi siempre compra en otro lado. Y nadie le hace seguimiento.</p></div>
+      <div class="card pain"><h3>Tu equipo en tareas repetitivas</h3><p class="muted">Horas al día respondiendo lo mismo en vez de atender, vender o cerrar con los clientes que sí están listos.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUCION / COMO FUNCIONA -->
+<section id="como-funciona">
+  <div class="wrap">
+    <span class="eyebrow">Cómo funciona</span>
+    <h2>De cero a tu agente funcionando en 14 días</h2>
+    <p class="lead">Nosotros hacemos el trabajo técnico. Tú nos das la información de tu negocio y apruebas antes de salir en vivo.</p>
+    <ol class="steps">
+      <li class="card step"><span class="day">Días 1–2</span><h3>Diagnóstico</h3><p class="muted">Revisamos tus canales, preguntas frecuentes, precios y cómo vendes hoy. Definimos qué debe resolver el agente y cómo medirlo.</p></li>
+      <li class="card step"><span class="day">Días 3–7</span><h3>Construcción</h3><p class="muted">Entrenamos al agente con tu información, tu tono y tus reglas. Lo conectamos a WhatsApp, tu web, tu agenda o tu CRM según el paquete.</p></li>
+      <li class="card step"><span class="day">Días 8–12</span><h3>Pruebas contigo</h3><p class="muted">Lo pruebas con casos reales. Ajustamos respuestas, límites y cuándo debe pasar la conversación a una persona.</p></li>
+      <li class="card step"><span class="day">Días 13–14</span><h3>En vivo + capacitación</h3><p class="muted">Lo activamos, capacitamos a tu equipo y te entregamos un reporte de lo que el agente atiende cada semana.</p></li>
+    </ol>
+    <div class="grid g4" style="margin-top:24px">
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3>Responde</h3><p class="muted">Precios, horarios, ubicación, requisitos, en segundos.</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 4h18l-7 8v6l-4 2v-8z"/></svg></div><h3>Califica</h3><p class="muted">Hace las preguntas clave y separa curiosos de clientes listos.</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div><h3>Agenda</h3><p class="muted">Reserva citas o visitas directamente en tu calendario.</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></div><h3>Pasa a tu equipo</h3><p class="muted">Cuando hace falta una persona, transfiere con todo el contexto.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CASOS DE USO -->
+<section class="alt" id="casos">
+  <div class="wrap">
+    <span class="eyebrow">Casos de uso</span>
+    <h2>Hecho para negocios que viven de responder rápido</h2>
+    <div class="tabs" role="tablist" aria-label="Industrias">
+      <button class="tab" role="tab" aria-selected="true" aria-controls="p-clinicas" id="t-clinicas">Clínicas</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-inmo" id="t-inmo" tabindex="-1">Inmobiliarias</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-acad" id="t-acad" tabindex="-1">Academias</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-legal" id="t-legal" tabindex="-1">Firmas legales</button>
+    </div>
+
+    <div class="card panel" role="tabpanel" id="p-clinicas" aria-labelledby="t-clinicas">
+      <h3>Clínicas dentales, estéticas y médicas</h3>
+      <ul class="checks">
+        <li>Responde precios orientativos de tratamientos y qué incluye cada uno.</li>
+        <li>Agenda, confirma y reprograma citas; envía recordatorios para reducir ausencias.</li>
+        <li>Da indicaciones previas (ayuno, documentos, seguro) y la ubicación.</li>
+        <li>Reactiva pacientes que no han vuelto en meses.</li>
+        <li>No da diagnósticos médicos: deriva al especialista cuando corresponde.</li>
+      </ul>
+    </div>
+    <div class="card panel" role="tabpanel" id="p-inmo" aria-labelledby="t-inmo" hidden>
+      <h3>Inmobiliarias y corredores de bienes raíces</h3>
+      <ul class="checks">
+        <li>Responde al instante a quien llega desde Encuentra24, Instagram o portales.</li>
+        <li>Califica: presupuesto, zona, compra o alquiler, financiamiento y fecha de mudanza.</li>
+        <li>Envía fichas de propiedades que encajan y agenda visitas con el corredor.</li>
+        <li>Da seguimiento automático a quien no respondió.</li>
+        <li>Pasa al corredor solo los leads calificados, con el resumen listo.</li>
+      </ul>
+    </div>
+    <div class="card panel" role="tabpanel" id="p-acad" aria-labelledby="t-acad" hidden>
+      <h3>Academias, institutos y cursos</h3>
+      <ul class="checks">
+        <li>Informa horarios, sedes, modalidades, costos y fechas de inicio.</li>
+        <li>Recomienda el curso o nivel adecuado según lo que busca la persona.</li>
+        <li>Agenda clases de prueba o visitas y envía el enlace de inscripción.</li>
+        <li>Hace seguimiento a interesados antes del cierre de matrícula.</li>
+        <li>Responde a padres y estudiantes también fuera de horario.</li>
+      </ul>
+    </div>
+    <div class="card panel" role="tabpanel" id="p-legal" aria-labelledby="t-legal" hidden>
+      <h3>Firmas de abogados y servicios profesionales</h3>
+      <ul class="checks">
+        <li>Recibe la consulta inicial y ordena los datos del caso con un cuestionario.</li>
+        <li>Identifica el área (migración, sociedades, laboral, familia…) y la urgencia.</li>
+        <li>Agenda la consulta con el abogado indicado y comunica honorarios de consulta.</li>
+        <li>Explica requisitos y documentos para trámites frecuentes.</li>
+        <li>No da asesoría legal: prepara el caso para que el abogado decida.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PAQUETES -->
+<section id="paquetes">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Paquetes</span>
+      <h2>Una inversión clara, sin sorpresas</h2>
+      <p class="lead">Pago de implementación: 50 % al iniciar y 50 % al entregar. La mensualidad cubre operación, mejoras y soporte.</p>
+    </div>
+    <div class="grid g3" style="margin-top:28px">
+      <div class="card price-card">
+        <h3>Starter</h3>
+        <p class="muted">Para empezar a no perder mensajes.</p>
+        <p class="price"><small>desde</small> $2,500</p>
+        <p class="monthly">+ $497/mes</p>
+        <ul class="checks">
+          <li>Agente en WhatsApp o en tu web</li>
+          <li>Respuestas con tu información (precios, horarios, servicios)</li>
+          <li>Captura de datos de cada lead</li>
+          <li>Transferencia a una persona</li>
+          <li>Reporte mensual</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://wa.me/507XXXXXXXX?text=Hola%2C%20me%20interesa%20el%20paquete%20Starter" target="_blank" rel="noopener">Quiero Starter</a>
+      </div>
+      <div class="card price-card featured">
+        <span class="tag">Más completo</span>
+        <h3>Pro</h3>
+        <p class="muted">Para convertir más leads en citas y ventas.</p>
+        <p class="price"><small>desde</small> $6,000</p>
+        <p class="monthly">+ $1,200/mes</p>
+        <ul class="checks">
+          <li>Todo lo de Starter, en WhatsApp y web</li>
+          <li>Agenda automática en tu calendario</li>
+          <li>Seguimiento automático a leads que no respondieron</li>
+          <li>Conexión a tu CRM u hoja de cálculo</li>
+          <li>Reportes semanales y mejoras continuas</li>
+        </ul>
+        <a class="btn btn-primary" href="https://wa.me/507XXXXXXXX?text=Hola%2C%20me%20interesa%20el%20paquete%20Pro" target="_blank" rel="noopener">Quiero Pro</a>
+      </div>
+      <div class="card price-card">
+        <h3>Empresa</h3>
+        <p class="muted">Para operaciones con varios canales o sedes.</p>
+        <p class="price"><small>desde</small> $12,000</p>
+        <p class="monthly">+ desde $2,500/mes</p>
+        <ul class="checks">
+          <li>Multicanal: WhatsApp, web, email, Instagram</li>
+          <li>Integraciones a medida con tus sistemas</li>
+          <li>Varios agentes, sedes o líneas de negocio</li>
+          <li>Tablero de métricas</li>
+          <li>Acompañamiento dedicado</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://calendar.app.google/XXXXXXXX" target="_blank" rel="noopener">Hablemos</a>
+      </div>
+    </div>
+
+    <div class="card entry">
+      <div>
+        <h3>¿No sabes por dónde empezar? Empieza por un diagnóstico</h3>
+        <p class="muted">Una llamada de 20 minutos sin costo para ver cuántas consultas estás perdiendo. Si tiene sentido, arrancamos con un <strong>diagnóstico + piloto pagado</strong>, que se acredita al 100 % si luego contratas un paquete.</p>
+      </div>
+      <a class="btn btn-primary" href="https://calendar.app.google/XXXXXXXX" target="_blank" rel="noopener">Agendar diagnóstico</a>
+    </div>
+    <p class="fine">Precios en USD (balboas). Costos de terceros (por ejemplo, la API oficial de WhatsApp o hosting) se facturan aparte y a costo. 2 meses de descuento pagando la mensualidad anual por adelantado.</p>
+  </div>
+</section>
+
+<!-- GARANTÍA + PRUEBA -->
+<section class="alt" id="garantia">
+  <div class="wrap grid g2">
+    <div class="card">
+      <span class="eyebrow">Garantía</span>
+      <h2 style="font-size:1.5rem">Si no funciona, no pagas la implementación</h2>
+      <p class="muted">Si en 30 días el agente no responde por sí solo al menos el 80 % de las consultas que recibe, te devolvemos el pago de implementación. Así de seguros estamos.</p>
+    </div>
+    <div>
+      <span class="eyebrow">Resultados</span>
+      <h2 style="font-size:1.5rem">Casos reales, pronto aquí</h2>
+      <!-- PLACEHOLDER: reemplazar solo con casos reales, con permiso escrito del cliente. No inventar. -->
+      <div class="placeholder">[CASO DE ÉXITO 1 — industria, resultado medido, cita autorizada]</div>
+      <div class="placeholder" style="margin-top:12px">[CASO DE ÉXITO 2 — captura real de métricas]</div>
+      <p class="fine">Estamos abriendo nuestros primeros cupos de implementación. Pregúntanos por las condiciones para clientes fundadores.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap" style="max-width:820px">
+    <div class="center"><span class="eyebrow">Preguntas frecuentes</span><h2>Lo que nos suelen preguntar</h2></div>
+    <details><summary>¿El agente va a responder cosas incorrectas?</summary><p>Solo responde con la información que tú apruebas y tiene reglas claras: si no sabe algo o el tema es delicado, lo pasa a una persona de tu equipo. Antes de salir en vivo lo pruebas tú mismo.</p></details>
+    <details><summary>¿Mis clientes van a notar que es una IA?</summary><p>Recomendamos ser transparentes: el agente se presenta como asistente virtual de tu negocio. En la práctica, a la gente le importa más recibir una respuesta útil a las 11 p. m. que hablar con una persona al día siguiente.</p></details>
+    <details><summary>¿Funciona con mi número de WhatsApp actual?</summary><p>Sí, en la mayoría de los casos. Lo conectamos mediante la API oficial de WhatsApp Business. En el diagnóstico revisamos tu caso y te explicamos las opciones.</p></details>
+    <details><summary>¿Necesito saber de tecnología o contratar a alguien?</summary><p>No. Nosotros lo construimos, lo conectamos y lo mantenemos. Tú solo necesitas darnos la información de tu negocio y unas horas para revisar y aprobar.</p></details>
+    <details><summary>¿Qué pasa con la privacidad de los datos de mis clientes?</summary><p>Los datos se usan solo para atender a tus clientes, en herramientas que tú controlas. Firmamos un acuerdo de confidencialidad y configuramos el agente para no pedir datos sensibles innecesarios.</p></details>
+    <details><summary>¿Y si en 14 días no está listo?</summary><p>El plazo cuenta desde que recibimos tu información y accesos. Si el retraso es nuestro, te lo decimos con anticipación y no cobramos la primera mensualidad hasta que esté funcionando.</p></details>
+    <details><summary>¿Puedo cancelar la mensualidad?</summary><p>Sí. La mensualidad es mes a mes con 30 días de aviso. Si pagas el año por adelantado, te regalamos 2 meses.</p></details>
+    <details><summary>¿Cómo se paga?</summary><p>Transferencia ACH, Yappy o PayPal. 50 % al iniciar y 50 % al entregar el agente funcionando. Entregamos comprobante de cada pago.</p></details>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section>
+  <div class="wrap">
+    <div class="final">
+      <h2>Arranca enero con tu agente ya funcionando</h2>
+      <p>Cuéntanos de tu negocio en 2 minutos por WhatsApp o agenda tu diagnóstico. Te decimos con números si te conviene, y si no, también.</p>
+      <div class="ctas">
+        <a class="btn btn-wa" href="https://wa.me/507XXXXXXXX?text=Hola%2C%20quiero%20un%20diagn%C3%B3stico%20para%20mi%20negocio" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+        <a class="btn btn-ghost" href="https://calendar.app.google/XXXXXXXX" target="_blank" rel="noopener">Agendar diagnóstico</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>[MARCA]</strong> · Agentes de IA para negocios · Ciudad de Panamá</p>
+    <p>hola@[MARCA].com · <a href="https://wa.me/507XXXXXXXX" target="_blank" rel="noopener">WhatsApp</a></p>
+    <p>© <span id="y">2026</span> [MARCA]. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="fab">
+  <a class="btn btn-wa" href="https://wa.me/507XXXXXXXX?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20del%20agente%20de%20IA" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+    <span class="sr">WhatsApp</span>
+  </a>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  try{var s=localStorage.getItem('theme'); if(s==='light'||s==='dark') root.setAttribute('data-theme',s);}catch(e){}
+  btn.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+    var next=cur==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+  });
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  function select(t){
+    tabs.forEach(function(x){
+      var on=x===t; x.setAttribute('aria-selected',on); x.tabIndex=on?0:-1;
+      document.getElementById(x.getAttribute('aria-controls')).hidden=!on;
+    });
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){select(t)});
+    t.addEventListener('keydown',function(e){
+      var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;
+      if(d){var n=tabs[(i+d+tabs.length)%tabs.length]; select(n); n.focus();}
+    });
+  });
+  document.getElementById('y').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
