@@ -28,3 +28,16 @@ Formato: fecha · contexto · decisión · resultado esperado · resultado real.
   Se crean 7 agentes especialistas y 5 comandos de operación.
 - **Resultado esperado**: fase 0 → 3 clientes pagos en 3 semanas.
 - **Pendiente de los dueños**: nicho de arranque, habilidades/horas, presupuesto, marca.
+
+## 2026-10-14 — Oferta, precios y SOP del "Agente de IA en 14 días" (PROPUESTA)
+- **Contexto**: sprint Q4, presupuesto 0, sin casos de éxito. Borrador de precios
+  2 500/6 000/12 000 + 497/1 200/2 500.
+- **Propuesta (pendiente de aprobación de los dueños)**: piloto pagado 450 abonable;
+  Starter 1 800 + 497/mes y Pro 4 900 + 1 200/mes con permanencia de 6 meses;
+  Empresa sin cambio (12 meses). Anual = 10 meses pagados por 12. Garantía medida
+  sobre batería de QA firmada (no sobre tráfico real). Socios: 15 % referido, 20 % +
+  10 % × 12 meses comercial, marca blanca −35 %. Costos de terceros a cargo del cliente.
+- **Documentos**: `cerebro/ofertas/agente-ia-14-dias.md`, `cerebro/sops/entrega-agente-ia.md`,
+  `cerebro/plantillas/propuesta-comercial.md` (requiere revisión de abogado panameño).
+- **Resultado esperado**: ≥ 30 % de diagnósticos → piloto; ≥ 50 % de pilotos → paquete.
+  Revisar precios tras 10 diagnósticos.

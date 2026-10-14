@@ -56,11 +56,12 @@ cartera de clientes que deje 2027 encaminado. Se persigue 300k; se reporta la ve
   en su factura.
 - Primer gasto permitido solo después del primer cobro.
 
-## Precios del sprint (se ajustan con el agente de oferta)
+## Precios del sprint (propuesta del agente de oferta, pendiente de aprobación)
+Piloto "Diagnóstico + Demo": 450 USD, abonable al 100 %.
 | Paquete | Implementación | Mensualidad |
 |---|---|---|
-| Starter — agente web/WhatsApp con FAQ y captura de leads | 2 500 | 497 |
-| Pro — + seguimiento automático, agenda, CRM, reportes | 6 000 | 1 200 |
+| Starter — agente web/WhatsApp con FAQ y captura de leads | 1 800 | 497 |
+| Pro — + seguimiento automático, agenda, CRM, reportes | 4 900 | 1 200 |
 | Empresa — multi-canal, integraciones a medida | desde 12 000 | desde 2 500 |
 Cobro: 50 % al firmar, 50 % al entregar. Descuento de 2 meses por pago anual adelantado.
 

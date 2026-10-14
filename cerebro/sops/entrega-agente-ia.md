@@ -139,7 +139,7 @@ Horas indicadas: Starter / Pro (Empresa: plan propio, ~2× Pro).
 | **14** | **Entrega formal**: acta, QA final, manual, runbook, exportes. Factura 50 % restante. Inicio de mensualidad | Acta firmada; cobro emitido | 0,5 / 1 |
 | 15–30 | Hipercuidado: revisión diaria de escalados la 1.ª semana, luego 2 veces por semana; mejoras a KB | Informe de cierre de garantía (día 30) | incluido en mensualidad |
 
-**Total estimado**: Starter ≈ 14 h · Pro ≈ 34 h (consistente con los unit economics).
+**Total estimado**: Starter ≈ 14–15 h · Pro ≈ 34 h (consistente con los unit economics).
 
 **Plan B si Meta se retrasa** (verificación/nombre/número): lanzar en el widget web y
 en el número de prueba con el equipo; mantener el número actual del cliente en la

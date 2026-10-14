@@ -272,7 +272,7 @@
 ### C — Respuestas rápidas frecuentes
 | Responde | Contesta así |
 |---|---|
-| "¿Cuánto cuesta?" | "Depende de canales e integraciones: los paquetes van desde USD 2,500 de implementación + 497/mes. En 20 minutos le digo cuál le conviene y si le da retorno. ¿[DÍA] o [DÍA]?" |
+| "¿Cuánto cuesta?" | "Depende de canales e integraciones: los paquetes van desde USD 1,800 de implementación + 497/mes. En 20 minutos le digo cuál le conviene y si le da retorno. ¿[DÍA] o [DÍA]?" |
 | "Mándame información" | "Con gusto: [LINK-LANDING]. Para no mandarle algo genérico, ¿cuántos mensajes reciben al día más o menos? Así le digo qué parte le aplica." |
 | "Ya tenemos a alguien que responde" | "¡Perfecto! El agente no lo reemplaza: le quita las preguntas repetitivas y cubre noches y fines de semana. ¿Cuántos mensajes llegan fuera de horario?" |
 | "No me interesa" | "Entendido, gracias por responder. No le vuelvo a escribir. ¡Éxitos!" (registrar y cerrar) |

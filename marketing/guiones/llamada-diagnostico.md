@@ -98,8 +98,8 @@ C = 60, P = 0.40, T = 0.30, V = 180, H = 15, S = 6.
 - Ingreso recuperado = 7.7 × 180 = **USD 1,393/mes**
 - Ahorro de tiempo = 15 × 0.5 × 6 × 4.3 = **USD 194/mes**
 - Beneficio mensual ≈ **USD 1,587**
-- Paquete Starter (2,500 + 497): ganancia neta ≈ 1,090/mes → recupera el setup en **≈ 2.3 meses**.
-- Paquete Pro (6,000 + 1,200): ganancia neta ≈ 387/mes → recupera en **≈ 15.5 meses** → **no recomendar Pro** a este prospecto; recomendar Starter.
+- Paquete Starter (1,800 + 497): ganancia neta ≈ 1,090/mes → recupera el setup en **≈ 1.7 meses**.
+- Paquete Pro (4,900 + 1,200): ganancia neta ≈ 387/mes → recupera en **≈ 12.7 meses** → **no recomendar Pro** a este prospecto; recomendar Starter.
 
 **Regla de recomendación**
 | Si… | Recomendar |
@@ -127,7 +127,7 @@ Presenta **una** recomendación, con su número de ROI:
 
 **Si duda por monto o confianza → ofrecer la entrada: Diagnóstico + piloto pagado**
 > "Si prefieres probar primero, hacemos un piloto: en [7–10] días dejamos el agente funcionando en tu web o un número de prueba con tus preguntas reales y medimos. Cuesta **USD [PRECIO PILOTO]** y se acredita al 100 % si luego sigues con un paquete."
-*Precio sugerido del piloto: 300–500 USD (a confirmar por los dueños).*
+*Precio del piloto: 450 USD, 100 % abonable si firma en 14 días (ver `cerebro/ofertas/agente-ia-14-dias.md`).*
 
 ## 7. Manejo de objeciones
 Primero **reconoce**, luego **pregunta** para entender, después **responde** y **confirma**.
